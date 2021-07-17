@@ -6,4 +6,18 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  this.route('login', { path: '/' });
+  this.route('register');
+  this.route('login');
+  this.route('tickets');
+  this.route('passengers');
+  this.route('cancel');
+  // this.route('authenticated', { path: '' }, function () {
+  //   // all routes that require the session to be authenticated
+  //   this.route('tickets');
+  //   this.route('passengers');
+  //   this.route('cancel');
+  // });
+  this.route('logout');
+});

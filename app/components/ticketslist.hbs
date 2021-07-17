@@ -1,0 +1,21 @@
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Class Name</th>
+            <th>Available</th>
+            <th>Waiting</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each @tickets as |t|}}
+        <tr>
+            <td><input type='radio' id="classChoiceId" name='classChoice' value={{t.classId}} />
+            </td>
+            <td>{{t.className}}</td>
+            <td>{{t.available}}</td>
+            <td>{{t.waiting}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

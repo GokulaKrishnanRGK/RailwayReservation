@@ -1,0 +1,41 @@
+{{page-title "Register"}}
+
+<div  class="dataContainer">
+    <h1>Registration Page</h1>
+    <form {{on "submit" this.registerUser}}>
+        <table>
+            <tbody>
+                <tr>
+                    <td><label>Email Id: </label></td>
+                    <td><Input @type="email" id="userid" @value={{this.userid}} required /></td>
+                </tr>
+                <tr>
+                    <td><label>Name: </label></td>
+                    <td><Input @type="text" id="username" @value={{this.username}} required /></td>
+                </tr>
+                <tr>
+                    <td><label>Phone No.: </label></td>
+                    <td><Input @type="phoneno" id="phoneno" @value={{this.phoneno}} pattern="[0-9]{10}" required /></td>
+                </tr>
+                <tr>
+                    <td><label>DOB: </label></td>
+                    <td><Input @type="date" id="dob" @value={{this.dob}} required /></td>
+                </tr>
+                <tr>
+                    <td><label>Password: </label></td>
+                    <td><Input @type="password" @value={{this.password}} id="password" required /></td>
+                </tr>
+                <tr>
+                    <td><label>Retype Password: </label></td>
+                    <td><Input @type="password" @value={{this.cnfmpassword}} id="cnfmpassword" required /><br></td>
+                </tr>
+            </tbody>
+        </table>
+        <input id="submit" type="submit" value="Submit"><br>
+        <LinkTo @route="login" class="button">Go Back</LinkTo>
+        {{#if this.errorMessage}}
+        <p>{{this.errorMessage}}</p>
+        {{/if}}
+    </form>
+</div>
+{{outlet}}

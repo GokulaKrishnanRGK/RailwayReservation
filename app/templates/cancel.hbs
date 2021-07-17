@@ -1,0 +1,47 @@
+{{page-title "Cancel"}}
+
+<div class="dataContainer">
+    <h2>Cancel Booking</h2>
+
+    <label>Welcome!</label>
+
+    {{#if this.model.length}}
+    <table border="1 " cellpadding="10 ">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Booking Id</th>
+                <th>Customer Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Class Name</th>
+                <th>SeatNo</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this.model as |p|}}
+            <tr>
+                <td><input id="cancelCheck" type="checkbox" name="cancelCheck" value={{p.customerId}} /></td>
+                <td>{{p.bookingId}}</td>
+                <td>{{p.customerId}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.age}}</td>
+                <td>{{p.gender}}</td>
+                <td>{{p.source}}</td>
+                <td>{{p.destination}}</td>
+                <td>{{p.className}}</td>
+                <td>{{p.seatNo}}</td>
+                <td>{{p.status}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <label>No bookings yet!</label>
+    {{/if}}
+</div>
+{{outlet}}

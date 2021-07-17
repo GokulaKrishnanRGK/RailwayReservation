@@ -1,0 +1,12 @@
+<tr>
+    <td></td>
+    <td><input id="name" type="text" placeholder="Name" name="name" /></td>
+    <td><input id="age" type="number" placeholder="Age" name="age" /> </td>
+    <td> <select id="genderSelect" name="gender">
+            <option value="select">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select></td>
+    <td><input id="removeBtn" type="button" class="remove" {{ on 'click' this.removePassenger}} value="Remove"/></td>
+</tr>

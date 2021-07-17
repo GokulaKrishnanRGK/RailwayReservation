@@ -1,0 +1,47 @@
+{{page-title "Bookticket"}}
+
+<div class="dataContainer">
+    <label id="welcomeLabel">Welcome!</label>
+    <h2>Book Tickets</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><label>From</label></td>
+                <td><Input @type="text" id="from" @value={{this.from}} placeholder="From" /></td>
+                <td><label>To</label></td>
+                <td><Input @type="text" id="to" @value={{this.to}} placeholder="To" /></td>
+            </tr>
+        </tbody>
+    </table><br>
+
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Class Name</th>
+                <th>Available</th>
+                <th>Waiting</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this.model as |t|}}
+            <tr>
+                <td><input type='radio' id='classChoiceId' name='classChoice' value={{t.classId}} {{on 'click'
+                        this.addtable}} />
+                </td>
+                <td>{{t.className}}</td>
+                <td>{{t.available}}</td>
+                <td>{{t.waiting}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div id="passengerDiv">
+        {{#if this.classChoiceId}}
+            <Bookings/>
+        {{/if}}
+    </div>    
+</div>
+
+{{outlet}}
