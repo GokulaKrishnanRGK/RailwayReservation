@@ -1,7 +1,33 @@
-# railwayreservation-ui
+# TicketEase - Ticket Booking Platform
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+- Read additional instructions to run backend server from [Backend Repository](https://github.com/GokulaKrishnanRGK/RailwayReservationApi)
+
+### Tech Stack:
+- Java
+- Tomcat
+- Servlet
+- EmberJS
+- Ember-data
+- MySQL
+- Hibernate
+- Tomcat Authentication
+- OAuth
+
+## Project Overview
+
+TicketEase is a comprehensive ticket booking platform designed to streamline the process of purchasing and managing event tickets. The project leverages a robust tech stack to deliver a seamless user experience and secure authentication.
+
+## Features
+
+- **Comprehensive Ticket Booking System:**
+  - Developed using Servlet and Tomcat for backend operations.
+  - Utilized EmberJS and Ember-data for a dynamic and responsive frontend interface.
+  - Implemented Hibernate for efficient ORM and database interactions.
+
+- **Custom Authentication Realm:**
+  - Designed a custom Tomcat authentication realm to support various authentication methods including password, email-based OTP, and OAuth.
+  - Integrated dynamic user role-based security filters.
+  - Implemented Role-Based Access Control (RBAC) for precise authorization and tailored security policies.
 
 ## Prerequisites
 
@@ -54,3 +80,6 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+### Additional Details
+- [Backend Repository](https://github.com/GokulaKrishnanRGK/RailwayReservationApi)
